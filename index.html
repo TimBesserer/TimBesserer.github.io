@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Tim Besserer, Guelph, Ontario. AI agents in production for operations teams. Selected work.">
+<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}</style>
+<title>Tim Besserer, Selected Work</title>
+</head>
+<body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* Layout: one 44em reading column, left-aligned; cases separated by rules, numbers set in mono as a data strip under each case. */
+  :root {
+    --bg: #f7f8f6;
+    --fg: #1b2229;
+    --muted: #5b6670;
+    --rule: #d6dbd8;
+    --accent: #0f5c6e;
+    --accent-ink: #ffffff;
+    --strip: #eceeea;
+    --font-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14191d; --fg: #e6e9e7; --muted: #9aa5ad; --rule: #2c353b;
+      --accent: #5fb7c9; --accent-ink: #0d1a1e; --strip: #1c2327; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14191d; --fg: #e6e9e7; --muted: #9aa5ad; --rule: #2c353b;
+    --accent: #5fb7c9; --accent-ink: #0d1a1e; --strip: #1c2327; color-scheme: dark;
+  }
+  body {
+    background: var(--bg); color: var(--fg); font-family: var(--font-body);
+    font-size: 17px; line-height: 1.55;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 0;
+  }
+  main { max-width: 44em; margin: 0 auto; padding-block: 3rem 4rem; }
+  h1, h2, h3 { text-wrap: balance; line-height: 1.2; margin: 0; }
+  h1 { font-size: 2rem; font-weight: 600; letter-spacing: -0.01em; }
+  h2 { font-size: 0.8rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); font-family: var(--font-mono); }
+  h3 { font-size: 1.25rem; font-weight: 600; }
+  p { margin: 0; max-width: 65ch; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  header { display: grid; gap: 1rem; padding-bottom: 2rem; border-bottom: 1px solid var(--rule); }
+  .lede { font-size: 1.15rem; max-width: 60ch; }
+  .contact { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; font-family: var(--font-mono); font-size: 0.85rem; color: var(--muted); }
+  .contact span { user-select: all; }
+  section { display: grid; gap: 1rem; padding-block: 2.25rem; border-bottom: 1px solid var(--rule); }
+  section:last-of-type { border-bottom: 0; }
+  .case { display: grid; gap: 0.9rem; }
+  .case + .case { padding-top: 2rem; margin-top: 0.5rem; border-top: 1px dashed var(--rule); }
+  .when { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); }
+  .strip { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; background: var(--strip); padding: 0.75rem 1rem; font-family: var(--font-mono); font-size: 0.85rem; font-variant-numeric: tabular-nums; max-width: 100%; }
+  .strip div { display: grid; gap: 0.1rem; min-width: 0; }
+  .strip b { font-weight: 500; font-size: 1.05rem; color: var(--fg); }
+  .strip span { color: var(--muted); font-size: 0.75rem; }
+  .mine { color: var(--muted); font-size: 0.95rem; }
+  .mine strong { color: var(--fg); font-weight: 500; }
+  ul { margin: 0; padding-left: 1.2em; max-width: 65ch; display: grid; gap: 0.4rem; }
+  .earlier { display: grid; gap: 1.25rem; }
+  .earlier div { display: grid; gap: 0.3rem; }
+  footer { padding-top: 2rem; font-size: 0.85rem; color: var(--muted); max-width: 65ch; display: grid; gap: 0.5rem; }
+  @media (max-width: 480px) { body { font-size: 16px; } h1 { font-size: 1.6rem; } main { padding-block: 2rem 3rem; } }
+  @media (prefers-reduced-motion: no-preference) { a { transition: color 120ms ease; } }
+</style>
+
+<main>
+  <header>
+    <h1>Tim Besserer</h1>
+    <p class="lede">I put AI agents into operations teams and keep them running. Three years as co-founder and CPO of SectorFlow; 25 years of production software before that. Since early 2026 coding agents write nearly all of my team's code from specs I write, and I review it through evals and production outcomes.</p>
+    <div class="contact">
+      <span>Guelph, Ontario</span>
+      <span>tbesserer@gmail.com</span>
+      <a href="https://www.linkedin.com/in/tim-besserer-45822573">linkedin.com/in/tim-besserer-45822573</a>
+      <a href="https://github.com/TimBesserer">github.com/TimBesserer</a>
+      <a href="https://sectorflow.ai">sectorflow.ai</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>How I work now</h2>
+    <p>I write the spec: what a service owns, what it exposes, what it must never do, and the acceptance criteria. A coding agent does the implementation. I keep four things for myself: the architecture and the boundaries between services, anything touching tenant isolation or egress, the data model, and the acceptance criteria. Those are the decisions a client's security review asks about, and "the agent chose it" is not an answer. I read code when an eval fails or when the agent has over-engineered something, which is often.</p>
+    <p>The lesson I keep relearning: write the eval gold set, the real inputs and expected outputs, before the build. Acceptance criteria written in prose are ambiguous in ways the examples expose on day one.</p>
+  </section>
+
+  <section>
+    <h2>Selected work</h2>
+
+    <article class="case">
+      <div class="when">SectorFlow, September to October 2026</div>
+      <h3>Pod platform: eight headless services in three weeks</h3>
+      <p>Every managed agent we had shipped shared the same plumbing, hand-built each time: tenant identity, an API gateway, outbound egress controls, a control plane, an SDK. I needed it built once, deployed, and solid enough to onboard a paying client, with no other engineers free.</p>
+      <p>I split it into eight repositories and wrote a spec for each. Claude Code did the implementation, run as a tiered setup: one model planning and orchestrating across repos, a stronger one on the gateway and tenant isolation, a cheaper one on scaffolding, tests and docs. The services went live on our VM on October 26, 2026. SectorFlow is onboarding itself as client zero.</p>
+      <div class="strip">
+        <div><b>8</b><span>services, one spec each</span></div>
+        <div><b>~3 weeks</b><span>spec to live</span></div>
+        <div><b>3</b><span>model tiers</span></div>
+        <div><b>1 week</b><span>of rework the gold set would have saved</span></div>
+      </div>
+      <p class="mine"><strong>What I'd change:</strong> the gold set came after the build. Next time it comes first and the spec is written to match it.</p>
+    </article>
+
+    <article class="case">
+      <div class="when">Direct-sales company, 2025 to present</div>
+      <h3>Voice and email agents, measured in the client's own numbers</h3>
+      <p>The client wanted help with inbound phone volume. We deployed voice agents integrated with their commerce platform, then expanded to email, SMS and support tiers. The expansion came from one thing: a metrics dashboard in front of their support team showing what the agent actually did, in their language. Once the support lead could see the numbers, the next tiers were her idea.</p>
+      <p>Escalation rules were written with the client's support agents, not for them, so the people judged on the outcome owned the rules.</p>
+      <div class="strip">
+        <div><b>8,592</b><span>inbound calls, Jan 1 to Aug 13, 2026</span></div>
+        <div><b>3,030</b><span>closed with no human (35%)</span></div>
+        <div><b>18.5%</b><span>handled off-hours, previously no coverage</span></div>
+        <div><b>2.1%</b><span>negative sentiment</span></div>
+        <div><b>28%</b><span>ask for a human before stating a problem</span></div>
+      </div>
+      <p class="mine"><strong>My part:</strong> the data and retrieval layer behind the agents, the metrics dashboard, and the escalation design. The conversational agents themselves were built by my co-founder.</p>
+    </article>
+
+    <article class="case">
+      <div class="when">Textile manufacturer, 2026</div>
+      <h3>Discovery that found the real bottleneck</h3>
+      <p>The ask was "automate order processing." Discovery with the operations team mapped a 15 to 17 stage order intake pipeline and showed that most of the work was not in processing at all: tickets were piling up at the first stage. The output was a financial memo for the CFO with a prioritized build list, costs and payback, and a scoped Phase 1.</p>
+      <div class="strip">
+        <div><b>15 to 17</b><span>stages mapped</span></div>
+        <div><b>94.5%</b><span>of tickets stuck at stage 1</span></div>
+      </div>
+      <p class="mine"><strong>Outcome:</strong> Phase 1 on hold; the client deferred the decision to 2027. The memo is still the document they are deciding on.</p>
+    </article>
+
+    <article class="case">
+      <div class="when">Healthcare claims platform, 2026</div>
+      <h3>Phase 0 assessment for a claims adjudication platform</h3>
+      <p>A fixed-fee AI operations assessment: workflow mapping with the platform's team, a prioritized automation roadmap with costs and payback periods, and a Phase 1 scope. The client chose not to proceed to the build.</p>
+      <p class="mine"><strong>What I took from it:</strong> a good assessment can end in "not yet," and it should say so plainly rather than stretch to justify a build.</p>
+    </article>
+
+    <article class="case">
+      <div class="when">Valuation firm, 2024 to July 2026</div>
+      <h3>Daily news agent over 1,800 companies</h3>
+      <p>A recurring agent workflow monitoring 1,800+ companies daily. We defined with the client what counted as a meaningful story, then built and tuned the filtering and dedup chain that cut the raw feed to a few articles per company per day. Ran about two years; the client's needs changed and they churned in mid-2026.</p>
+      <div class="strip">
+        <div><b>1,800+</b><span>companies monitored daily</span></div>
+        <div><b>5 max</b><span>articles per company per day</span></div>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="when">SectorFlow product, 2025</div>
+      <h3>Bidstra: six weeks to a prototype, then shut down</h3>
+      <p>An agentic RFP-response tool: LangGraph multi-step reasoning over a retrieval layer of the company's past bids. Idea to working prototype in six weeks, then tested in buyer meetings. Buyers would not rely on AI-written responses for million-dollar bids. We stopped there rather than build further.</p>
+      <p class="mine"><strong>Why it's here:</strong> killing a prototype on evidence is part of the job. AI makes building cheap enough that the discipline is in deciding what not to build.</p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Design notes</h2>
+    <p>Three pages I wrote for SectorFlow clients, reproduced here as written. They are the answers a security review and a CFO ask for before a managed agent goes live. The sample client in them is fictional.</p>
+    <ul>
+      <li><a href="sectorflow/how-a-pod-works.html">How a SectorFlow pod works</a>: what stays the client's, where it runs and how data is kept apart, how changes reach them, and what we never do.</li>
+      <li><a href="sectorflow/replenishment-pod/architecture.html">Replenishment pod: architecture and releases</a>: where the code goes, where data lives and how long it is kept, how an agent version is updated, release steps in detail.</li>
+      <li><a href="sectorflow/replenishment-pod/demo.html">Replenishment pod: client walkthrough</a>: what a client sees in the first meeting and through a deployment.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Earlier</h2>
+    <div class="earlier">
+      <div>
+        <h3>Automation platform that became the acquisition asset</h3>
+        <p>Syntervision, 2014 onward. An automation platform with a visual workflow builder (d3.js, Angular, Groovy scripting) on Spring Boot 1.0.0. It became a core asset in Syntervision's acquisition by Airiam. Also led the redesign of a cybersecurity platform from a monolith into seven Spring Boot microservices and directed its Elasticsearch migration.</p>
+      </div>
+      <div>
+        <h3>Manufacturing monitoring platform for a global pharmaceutical manufacturer</h3>
+        <p>Owned for most of a decade. Inherited as a Java monolith, moved to a Spring Boot microservices platform. Expansion came plant by plant, from site teams asking for it.</p>
+      </div>
+      <div>
+        <h3>Mining operations software, 18 years</h3>
+        <p>Vale / INCO, 1996 to 2014. Built and maintained 20+ production applications for mining operations and administered the servers behind them.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Client names are withheld under client agreements. Figures are from production metrics and project records as of the dates shown. Ask me for a spec if you want to see how I work; I write those by hand.</p>
+  </footer>
+</main>
+</body>
+</html>
