@@ -65,6 +65,10 @@
   ul { margin: 0; padding-left: 1.2em; max-width: 65ch; display: grid; gap: 0.4rem; }
   .earlier { display: grid; gap: 1.25rem; }
   .earlier div { display: grid; gap: 0.3rem; }
+  .compact { display: grid; gap: 1.75rem; }
+  .compact article { display: grid; gap: 0.5rem; }
+  .compact h3 { font-size: 1.1rem; }
+  .compact .strip { padding: 0.5rem 0.75rem; }
   footer { padding-top: 2rem; font-size: 0.85rem; color: var(--muted); max-width: 65ch; display: grid; gap: 0.5rem; }
   @media (max-width: 480px) { body { font-size: 16px; } h1 { font-size: 1.6rem; } main { padding-block: 2rem 3rem; } }
   @media (prefers-reduced-motion: no-preference) { a { transition: color 120ms ease; } }
@@ -90,81 +94,90 @@
   </section>
 
   <section>
-    <h2>Selected work</h2>
+    <h2>Why code, not configuration</h2>
+    <p>For a decade the answer to "automate this" was a workflow product: drag the boxes, wire the steps, hope the vendor's connector does what you need. That made sense when writing code was the expensive part. It isn't any more. A coding agent working from a clear spec produces a workflow as plain code faster than I can configure the same thing in a visual builder, and the result is better in every way that matters afterward. It is in version control. It diffs. It has tests. You can trace exactly what ran and why. Nobody is locked into a canvas.</p>
+    <p>That is the bet behind the pod platform. Each client's workflow is a code version of their process, written by an agent from a spec, running on shared headless services for identity, gateway, egress, monitoring and evals. Standing one up is fast, changing it is a conversation and a passing eval, and the client keeps the workflow code.</p>
+  </section>
+
+  <section>
+    <h2>Where I think this is going</h2>
+    <p>The interface is moving into the AI client. People will run, check on and change their automations from Claude, ChatGPT or whatever they already work in, so everything I build now is MCP-enabled from day one. Products built around a canvas are competing with a spec and a coding agent, and I think the spec wins. The work that stays human is deciding what to build, what the system must never do, and how you will know it worked. That is the job I want.</p>
+  </section>
+
+  <section>
+    <h2>Pod platform</h2>
 
     <article class="case">
       <div class="when">SectorFlow, September to October 2026</div>
-      <h3>Pod platform: eight headless services in three weeks</h3>
+      <h3>The services every pod runs on</h3>
       <p>Every managed agent we had shipped shared the same plumbing, hand-built each time: tenant identity, an API gateway, outbound egress controls, a control plane, an SDK. I needed it built once, deployed, and solid enough to onboard a paying client, with no other engineers free.</p>
-      <p>I split it into eight repositories and wrote a spec for each. Claude Code did the implementation, run as a tiered setup: one model planning and orchestrating across repos, a stronger one on the gateway and tenant isolation, a cheaper one on scaffolding, tests and docs. The services went live on our VM on October 26, 2026. SectorFlow is onboarding itself as client zero.</p>
+      <p>I split it into eight repositories and wrote a spec for each. Claude Code did the implementation, run as a tiered setup: one model planning and orchestrating across repos, a stronger one on the gateway and tenant isolation, a cheaper one on scaffolding, tests and docs.</p>
       <div class="strip">
         <div><b>8</b><span>services, one spec each</span></div>
         <div><b>~3 weeks</b><span>spec to live</span></div>
         <div><b>3</b><span>model tiers</span></div>
-        <div><b>1 week</b><span>of rework the gold set would have saved</span></div>
-      </div>
-      <p class="mine"><strong>What I'd change:</strong> the gold set came after the build. Next time it comes first and the spec is written to match it.</p>
-    </article>
-
-    <article class="case">
-      <div class="when">Direct-sales company, 2025 to present</div>
-      <h3>Voice and email agents, measured in the client's own numbers</h3>
-      <p>The client wanted help with inbound phone volume. We deployed voice agents integrated with their commerce platform, then expanded to email, SMS and support tiers. The expansion came from one thing: a metrics dashboard in front of their support team showing what the agent actually did, in their language. Once the support lead could see the numbers, the next tiers were her idea.</p>
-      <p>Escalation rules were written with the client's support agents, not for them, so the people judged on the outcome owned the rules.</p>
-      <div class="strip">
-        <div><b>8,592</b><span>inbound calls, Jan 1 to Aug 13, 2026</span></div>
-        <div><b>3,030</b><span>closed with no human (35%)</span></div>
-        <div><b>18.5%</b><span>handled off-hours, previously no coverage</span></div>
-        <div><b>2.1%</b><span>negative sentiment</span></div>
-        <div><b>28%</b><span>ask for a human before stating a problem</span></div>
-      </div>
-      <p class="mine"><strong>My part:</strong> the data and retrieval layer behind the agents, the metrics dashboard, and the escalation design. The conversational agents themselves were built by my co-founder.</p>
-    </article>
-
-    <article class="case">
-      <div class="when">Textile manufacturer, 2026</div>
-      <h3>Discovery that found the real bottleneck</h3>
-      <p>The ask was "automate order processing." Discovery with the operations team mapped a 15 to 17 stage order intake pipeline and showed that most of the work was not in processing at all: tickets were piling up at the first stage. The output was a financial memo for the CFO with a prioritized build list, costs and payback, and a scoped Phase 1.</p>
-      <div class="strip">
-        <div><b>15 to 17</b><span>stages mapped</span></div>
-        <div><b>94.5%</b><span>of tickets stuck at stage 1</span></div>
-      </div>
-      <p class="mine"><strong>Outcome:</strong> Phase 1 on hold; the client deferred the decision to 2027. The memo is still the document they are deciding on.</p>
-    </article>
-
-    <article class="case">
-      <div class="when">Healthcare claims platform, 2026</div>
-      <h3>Phase 0 assessment for a claims adjudication platform</h3>
-      <p>A fixed-fee AI operations assessment: workflow mapping with the platform's team, a prioritized automation roadmap with costs and payback periods, and a Phase 1 scope. The client chose not to proceed to the build.</p>
-      <p class="mine"><strong>What I took from it:</strong> a good assessment can end in "not yet," and it should say so plainly rather than stretch to justify a build.</p>
-    </article>
-
-    <article class="case">
-      <div class="when">Valuation firm, 2024 to July 2026</div>
-      <h3>Daily news agent over 1,800 companies</h3>
-      <p>A recurring agent workflow monitoring 1,800+ companies daily. We defined with the client what counted as a meaningful story, then built and tuned the filtering and dedup chain that cut the raw feed to a few articles per company per day. Ran about two years; the client's needs changed and they churned in mid-2026.</p>
-      <div class="strip">
-        <div><b>1,800+</b><span>companies monitored daily</span></div>
-        <div><b>5 max</b><span>articles per company per day</span></div>
       </div>
     </article>
 
     <article class="case">
-      <div class="when">SectorFlow product, 2025</div>
-      <h3>Bidstra: six weeks to a prototype, then shut down</h3>
-      <p>An agentic RFP-response tool: LangGraph multi-step reasoning over a retrieval layer of the company's past bids. Idea to working prototype in six weeks, then tested in buyer meetings. Buyers would not rely on AI-written responses for million-dollar bids. We stopped there rather than build further.</p>
-      <p class="mine"><strong>Why it's here:</strong> killing a prototype on evidence is part of the job. AI makes building cheap enough that the discipline is in deciding what not to build.</p>
+      <h3>Design notes</h3>
+      <p>Three pages I wrote for SectorFlow clients, reproduced here as written. They are the answers a security review and a CFO ask for before a managed agent goes live. The sample client in them is fictional.</p>
+      <ul>
+        <li><a href="sectorflow/how-a-pod-works.html">How a SectorFlow pod works</a>: what stays the client's, where it runs and how data is kept apart, how changes reach them, and what we never do.</li>
+        <li><a href="sectorflow/replenishment-pod/architecture.html">Replenishment pod: architecture and releases</a>: where the code goes, where data lives and how long it is kept, how an agent version is updated, release steps in detail.</li>
+        <li><a href="sectorflow/replenishment-pod/demo.html">Replenishment pod: client walkthrough</a>: what a client sees in the first meeting and through a deployment.</li>
+      </ul>
     </article>
   </section>
 
   <section>
-    <h2>Design notes</h2>
-    <p>Three pages I wrote for SectorFlow clients, reproduced here as written. They are the answers a security review and a CFO ask for before a managed agent goes live. The sample client in them is fictional.</p>
-    <ul>
-      <li><a href="sectorflow/how-a-pod-works.html">How a SectorFlow pod works</a>: what stays the client's, where it runs and how data is kept apart, how changes reach them, and what we never do.</li>
-      <li><a href="sectorflow/replenishment-pod/architecture.html">Replenishment pod: architecture and releases</a>: where the code goes, where data lives and how long it is kept, how an agent version is updated, release steps in detail.</li>
-      <li><a href="sectorflow/replenishment-pod/demo.html">Replenishment pod: client walkthrough</a>: what a client sees in the first meeting and through a deployment.</li>
-    </ul>
+    <h2>Client work</h2>
+    <div class="compact">
+      <article>
+        <div class="when">Direct-sales company, 2025 to present</div>
+        <h3>Voice and email agents, measured in the client's own numbers</h3>
+        <p>Voice agents for inbound calls, integrated with their commerce platform, then email, SMS and support tiers. The expansion came from a metrics dashboard that showed the support team what the agent actually did, in their language. Escalation rules were written with their support agents, not for them. My part: the data and retrieval layer, the dashboard, and the escalation design; the conversational agents were built by my co-founder.</p>
+        <div class="strip">
+          <div><b>8,592</b><span>inbound calls, Jan 1 to Aug 13, 2026</span></div>
+          <div><b>3,030</b><span>closed with no human (35%)</span></div>
+          <div><b>18.5%</b><span>handled off-hours</span></div>
+        </div>
+      </article>
+
+      <article>
+        <div class="when">Textile manufacturer, 2026</div>
+        <h3>Discovery that found the real bottleneck</h3>
+        <p>The ask was "automate order processing." Discovery with the operations team mapped a 15 to 17 stage intake pipeline and found the pile-up at the first stage, not in processing. Output: a financial memo for the CFO with a prioritized build list, costs and payback, and a scoped Phase 1, deferred to 2027.</p>
+        <div class="strip">
+          <div><b>94.5%</b><span>of tickets stuck at stage 1</span></div>
+        </div>
+      </article>
+
+      <article>
+        <div class="when">Healthcare claims platform, 2026</div>
+        <h3>Phase 0 assessment for a claims adjudication platform</h3>
+        <p>Fixed-fee assessment: workflow mapping with the platform's team, a prioritized roadmap with costs and payback periods, a Phase 1 scope. The build did not proceed: Phase 1 needed a shadow run against real claims, and none of the platform's clients would permit their data to be used for it. Data permission is now the first thing I ask.</p>
+      </article>
+
+      <article>
+        <div class="when">Valuation firm, 2024 to present</div>
+        <h3>Daily news agent over 1,800 companies</h3>
+        <p>We defined with the client what counts as a meaningful story, then built and tuned the filtering and dedup chain that cuts the raw feed to at most five articles per company per day. Running daily for about two years.</p>
+        <div class="strip">
+          <div><b>1,800+</b><span>companies monitored daily</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>A failed product</h2>
+    <article class="case">
+      <div class="when">SectorFlow, 2025</div>
+      <h3>Bidstra: six weeks to a prototype, then shut down</h3>
+      <p>An agentic RFP-response tool: LangGraph multi-step reasoning over a retrieval layer of the company's past bids. Idea to working prototype in six weeks, then tested in buyer meetings. Buyers would not rely on AI-written responses for million-dollar bids. We stopped there rather than build further.</p>
+      <p class="mine"><strong>Why it's here:</strong> killing a prototype on evidence is part of the job. AI makes building cheap enough that the discipline is in deciding what not to build.</p>
+    </article>
   </section>
 
   <section>
